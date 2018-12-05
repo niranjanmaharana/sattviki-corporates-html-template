@@ -824,6 +824,8 @@ img {
         margin-right: 10px;
         text-decoration: line-through; }
     .single-product-wrapper .product-description .hover-content {
+      /*temporarilly hidden*/
+      display: none;
       position: absolute;
       width: calc(100% - 40px);
       top: -70px;
@@ -846,6 +848,8 @@ img {
     opacity: 1;
     visibility: visible; }
   .single-product-wrapper:hover .product-img .product-favourite a {
+    /*temporarilly hidden*/
+    display: none;
     opacity: 1;
     visibility: visible; }
   .single-product-wrapper:hover .hover-content {
@@ -1776,9 +1780,8 @@ div.top-bar p {
   margin: 20px auto 40px;
 }
 section.products .owl-carousel {
-  margin-top: 100px;
+  margin-top: 70px;
 }
-
 section.products .owl-carousel .product .item-image {
   position: relative;
   padding: 40px;
@@ -1879,19 +1882,27 @@ section.products .owl-carousel .owl-nav {
   position: absolute;
   top: -65px;
   right: 0;
+  display: flex;
 }
 
-section.products .owl-carousel .owl-nav .owl-prev.disabled, section.products .owl-carousel .owl-nav .owl-next.disabled {
-  background: #eee;
+.owl-nav .owl-prev.disabled,
+.owl-nav .owl-next.disabled {
+   display: none;
 }
+
 section.products .owl-carousel .owl-nav .owl-prev, section.products .owl-carousel .owl-nav .owl-next {
   width: 40px;
   height: 40px;
   line-height: 40px;
-  background: #fff;
+  background: #ece9e9;
   color: #333;
   text-align: center;
   line-height: 33px;
   border-radius: 0;
   margin-left: 4px;
+  padding-top: 4px;
+}
+
+section.products .owl-carousel .owl-nav .owl-prev:hover, section.products .owl-carousel .owl-nav .owl-next:hover {
+  background: #ffffff;
 }
